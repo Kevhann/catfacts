@@ -31,5 +31,21 @@ app.get("/facts", async (req, res) => {
   res.send(randoms)
 })
 
+app.get("/facts/:id", async (req, res) => {
+  console.log("hello", req.params.id)
+
+  const result = await fetch("https://cat-fact.herokuapp.com/facts")
+  const resultJson = await result.json()
+
+  const found = resultJson.all.find(fact => fact._id === req.params.id)
+  console.log("found:", found)
+  if (found === undefined) {
+    res.status(404)
+  }
+  res.send(found)
+})
+
 const PORT = 3001
 app.listen(PORT, () => console.log(`listening on ${PORT}`))
+
+module.exports = { getRandomItems }
