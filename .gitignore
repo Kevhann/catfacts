@@ -1,1 +1,4 @@
 node_modules
+build
+catfacts/build
+catfacts/node_modules
