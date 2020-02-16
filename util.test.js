@@ -1,9 +1,7 @@
 const { mockData } = require("./mockData")
-const { getRandomItems } = require("./index")
-const app = require("./index")
+const { getRandomItems } = require("./util")
 
 test("randomArrayReturnsOne", async () => {
   const res = getRandomItems(mockData, 1)
   expect(res.length).toBe(1)
-  await app.close()
 })
