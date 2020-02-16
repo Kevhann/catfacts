@@ -57,21 +57,6 @@ const mockData = [
     },
     upvotes: 5,
     userUpvoted: null
-  },
-  {
-    _id: "5b4911940508220014ccfe94",
-    text:
-      "By the time a cat is 9 years old, it will only have been awake for three years of its life.",
-    type: "cat",
-    user: {
-      _id: "5a9ac18c7478810ea6c06381",
-      name: {
-        first: "Alex",
-        last: "Wohlbruck"
-      }
-    },
-    upvotes: 5,
-    userUpvoted: null
   }
 ]
 
